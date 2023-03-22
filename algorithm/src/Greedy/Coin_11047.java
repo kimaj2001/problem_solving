@@ -38,7 +38,7 @@ public class Coin_11047 {
 
 /*
 입력
-10 4790
+10 4200
 1
 5
 10
@@ -51,6 +51,16 @@ public class Coin_11047 {
 50000
 
 출력
-12
+6
+
+==== 동작 과정 ====
+type : 1000, price : 4200
+result : 4, price : 200
+
+
+type : 100, price : 200
+result : 6, price : 0
+
+6
  */
 
