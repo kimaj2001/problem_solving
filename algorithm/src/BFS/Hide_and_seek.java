@@ -75,4 +75,46 @@ public class Hide_and_seek {
 /*
 입력값 : 5 17
 출력값 : 2
+
+==== 동작 과정 확인 ====
+현재 정점 및 현재 정점의 시간을 확인
+현재 정점에서 * 2, -1, +1 을 확인하여 queue 에 추가한다.
+큐와 해당 정점의 시간을 같이 확인할 수 있다.
+
+n : 5, time : 0
+n * 2 = 10, time[n*2] = 0
+n - 1 = 4, time[n-1] = 1
+n + 1 = 6, time[n+1] = 1
+queue:10-0  queue:4-1  queue:6-1  queue : [10, 4, 6]
+
+
+n : 10, time : 0
+n * 2 = 20, time[n*2] = 0
+n - 1 = 9, time[n-1] = 1
+n + 1 = 11, time[n+1] = 1
+queue:4-1  queue:6-1  queue:20-0  queue:9-1  queue:11-1  queue : [4, 6, 20, 9, 11]
+
+
+n : 4, time : 1
+n * 2 = 8, time[n*2] = 1
+n - 1 = 3, time[n-1] = 2
+queue:6-1  queue:20-0  queue:9-1  queue:11-1  queue:8-1  queue:3-2  queue : [6, 20, 9, 11, 8, 3]
+
+<중략>
+
+n : 42, time : 1
+n * 2 = 84, time[n*2] = 1
+n + 1 = 43, time[n+1] = 2
+queue:36-1  queue:17-2  queue:44-1  queue:23-2  queue:32-1  queue:15-2  queue:1-4  queue:48-1  queue:25-2  queue:26-2  queue:28-2  queue:160-0  queue:79-1  queue:81-1  queue:78-1  queue:82-1  queue:76-1  queue:37-2  queue:84-1  queue:43-2  queue : [36, 17, 44, 23, 32, 15, 1, 48, 25, 26, 28, 160, 79, 81, 78, 82, 76, 37, 84, 43]
+
+
+n : 36, time : 1
+n * 2 = 72, time[n*2] = 1
+n - 1 = 35, time[n-1] = 2
+queue:17-2  queue:44-1  queue:23-2  queue:32-1  queue:15-2  queue:1-4  queue:48-1  queue:25-2  queue:26-2  queue:28-2  queue:160-0  queue:79-1  queue:81-1  queue:78-1  queue:82-1  queue:76-1  queue:37-2  queue:84-1  queue:43-2  queue:72-1  queue:35-2  queue : [17, 44, 23, 32, 15, 1, 48, 25, 26, 28, 160, 79, 81, 78, 82, 76, 37, 84, 43, 72, 35]
+
+
+n : 17, time : 2
+2
+
  */
